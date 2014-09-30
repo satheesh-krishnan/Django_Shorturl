@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SHORTUP</title>
+<h2>SHORT URL</h2>
+</head>
+<body>
+<form action="" method="post" name="logi">
+{% csrf_token %}
+<p>{{f.urlform(maxlength=300)}}<input name='add' type='submit' value='convert'></p>
+{% if h %}
+<h3>SHORTER URL<h3>
+
+<p>http://127.0.0.1:8000/{{h}}</p>
+{% endif %}
+</form>
+</body>
